@@ -1,4 +1,4 @@
-`   `package nyc.c4q.sirisays;
+package nyc.c4q.sirisays;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

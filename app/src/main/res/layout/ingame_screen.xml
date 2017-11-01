@@ -9,30 +9,24 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_lens_black_24dp"
         android:contentDescription="circle"
-        android:id="@+id/first"
-        android:onClick="fadeIt"/>
+        android:id="@+id/first"/>
     <ImageView
         android:layout_width="179dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_lens_black_24dp"
         android:contentDescription="circle"
-        android:id="@+id/second"
-        android:onClick="fadeIt"/>
-
+        android:id="@+id/second"/>
     <ImageView
         android:layout_width="179dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_lens_black_24dp"
         android:contentDescription="circle"
-        android:id="@+id/third"
-        android:onClick="fadeIt"/>
-
+        android:id="@+id/third"/>
     <ImageView
         android:layout_width="179dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_lens_black_24dp"
         android:contentDescription="circle"
-        android:id="@+id/fourth"
-        android:onClick="fadeIt"/>
+        android:id="@+id/fourth"/>
 
 </LinearLayout>

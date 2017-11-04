@@ -9,7 +9,8 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_lens_black_24dp"
         android:contentDescription="circle"
-        android:id="@+id/first"/>
+        android:id="@+id/first"
+        />
     <ImageView
         android:layout_width="179dp"
         android:layout_height="wrap_content"

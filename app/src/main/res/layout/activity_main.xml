@@ -1,38 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="179dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_lens_black_24dp"
-        android:contentDescription="circle"
-        android:id="@+id/first"
-        android:onClick="fadeIt"/>
-    <ImageView
-        android:layout_width="179dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_lens_black_24dp"
-        android:contentDescription="circle"
-        android:id="@+id/second"
-        android:onClick="fadeIt"/>
+        >
+        <ImageView
+            android:id="@+id/first"
+            android:layout_width="179dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:contentDescription="circle"
+            android:onClick="fadeIt"
+            android:src="@drawable/pink_vector_circle" />
 
-    <ImageView
-        android:layout_width="179dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_lens_black_24dp"
-        android:contentDescription="circle"
-        android:id="@+id/third"
-        android:onClick="fadeIt"/>
+        <ImageView
+            android:id="@+id/fourth"
+            android:layout_width="179dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:contentDescription="circle"
+            android:onClick="fadeIt"
+            android:src="@drawable/blue_vector_circle" />
+    </LinearLayout>
 
-    <ImageView
-        android:layout_width="179dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_lens_black_24dp"
-        android:contentDescription="circle"
-        android:id="@+id/fourth"
-        android:onClick="fadeIt"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <ImageView
+                android:id="@+id/third"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:contentDescription="circle"
+                android:onClick="fadeIt"
+                android:src="@drawable/green_vector_circle" />
+
+            <ImageView
+                android:id="@+id/second"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:contentDescription="circle"
+                android:onClick="fadeIt"
+                android:src="@drawable/yellow_vector_circle" />
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="    Please follow the pattern "
+        android:layout_gravity="center"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/score"
+        android:text="    Score: "
+        android:textSize="25dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>
+
+
+
+
+

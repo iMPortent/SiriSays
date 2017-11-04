@@ -25,7 +25,9 @@ public class ThreadManager {
         for(int i = 0; i < pattern.size();i++) {
             SharedAnimation animation = new SharedAnimation();
             animation.setImageView(pattern.get(i));
-            animation.threadIt();        }
+            animation.threadIt();
+
+        }
     }
 
     public static class SharedAnimation extends Handler implements Runnable {

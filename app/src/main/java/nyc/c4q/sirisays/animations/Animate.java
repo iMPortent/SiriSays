@@ -13,10 +13,8 @@ import android.util.*;
  */
 
 public class Animate {
-    static AlphaAnimation fadeOut;
     final static private char[] codeChars = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
     final static  Random randomNum = new Random();
-
 //    public static String generate(){
 ////        int number = randomNum.nextInt(14);
 //        String hexCode ="";
@@ -27,12 +25,21 @@ public class Animate {
 //    }
 
     public static Animation createFade() {
-        fadeOut = new AlphaAnimation(1, 0);
+        AlphaAnimation fadeOut = new AlphaAnimation(1, 0);
         fadeOut.setInterpolator(new AccelerateInterpolator());
         fadeOut.setStartOffset(0);
         fadeOut.setDuration(1000);
         return fadeOut;
     }
+
+    public static Animation fadeIn() {
+        AlphaAnimation fadeIn = new AlphaAnimation(0, 1);
+        fadeIn.setInterpolator(new AccelerateInterpolator());
+        fadeIn.setStartOffset(0);
+        fadeIn.setDuration(1000);
+        return fadeIn;
+    }
+
 
     /**
      * Created by MarckemX on 11/2/17.

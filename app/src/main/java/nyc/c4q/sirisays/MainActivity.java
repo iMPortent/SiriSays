@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         CPUpat();
         //setColors();
-    }
+     }
 
     public void setValues(){
         circle_one = findViewById(R.id.first);
@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
         v.startAnimation(Animate.createFade());
 
+        if(matchPattern(v,index)&& !(index == CPUpat.size()-1)){index++;} else{ index = 0; CPUpat();}
 
-        matchPattern(v,index);
 
 //        Toast.makeText(getApplicationContext(),String.valueOf(userPat.size()),Toast.LENGTH_SHORT).show();
 //        for(int i = 0 ; i < CPUpat.size();i++) {
@@ -70,6 +70,17 @@ public class MainActivity extends AppCompatActivity {
         manager.addToPattern(pickImage);
         manager.runPattern();
      }
+
+    public boolean matchPattern(View view, int index){
+        if(CPUpat.get(index)==view.getId()){
+            Toast.makeText(getApplicationContext(),"right",Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(getApplicationContext(),"wrong",Toast.LENGTH_SHORT).show();
+            index = 0;
+            return false;
+        }
+    }
 
 
 //     public void runPattern(ArrayList<Integer> pattern){
@@ -99,20 +110,7 @@ public class MainActivity extends AppCompatActivity {
 //         }
 //     }
 
-     public boolean matchPattern(View view, int index){
-         if(CPUpat.get(index)==view.getId()){
-             Toast.makeText(getApplicationContext(),"right",Toast.LENGTH_SHORT).show();
-                if(index == CPUpat.size()-1){
-                    index = 0;
-                    CPUpat();
-                } else { index ++; }
-             return true;
-         } else {
-             Toast.makeText(getApplicationContext(),"wrong",Toast.LENGTH_SHORT).show();
-             index = 0;
-             return false;
-         }
-     }
+
 
 //     public void compTurn(){
 //         CPUpat();

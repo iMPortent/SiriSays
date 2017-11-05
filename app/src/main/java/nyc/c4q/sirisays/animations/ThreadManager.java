@@ -12,7 +12,7 @@ import android.os.*;
 
 public class ThreadManager {
 
-//    private static ArrayList<Thread>multipleThreads = new ArrayList();
+    private static ArrayList<Handler>multipleHandles = new ArrayList();
     static ArrayList<ImageView>pattern = new ArrayList();
     final private static  int DELAY = 1000;
     final private String TAG = "SharedAnimation";
@@ -22,12 +22,15 @@ public class ThreadManager {
     }
 
     public void runPattern(){
+        multipleHandles.add(new SharedAnimation());
         for(int i = 0; i < pattern.size();i++) {
-            SharedAnimation animation = new SharedAnimation();
-            animation.setImageView(pattern.get(i));
-            animation.threadIt();
+//            SharedAnimation animation = new SharedAnimation();
+//            animation.setImageView(pattern.get(i));
+//            animation.threadIt();
+
 
         }
+
     }
 
     public static class SharedAnimation extends Handler implements Runnable {
@@ -41,10 +44,11 @@ public class ThreadManager {
         @Override
         public void run() {
             x.startAnimation(Animate.createFade());
+            //threadIt();
         }
 
         public void threadIt(){
-            postDelayed(this,1000);
+            postDelayed(this,2000);
         }
 
 
